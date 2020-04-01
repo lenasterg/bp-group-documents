@@ -1,6 +1,3 @@
-# bp-group-documents
-BP Group Documents
-
 ## BP Group Documents  - WordPress Plugin
 
 You can find the plugin at  https://wordpress.org/plugins/bp-group-documents/ 
