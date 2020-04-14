@@ -18,7 +18,7 @@ function bp_group_documents_front_cssjs() {
     if ($bp->current_component == $bp->groups->slug) {
         wp_enqueue_script('bp-group-documents', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/js/general.js', array('jquery'), BP_GROUP_DOCUMENTS_VERSION);
         wp_localize_script('bp-group-documents', 'l10nBpGrDocuments', array(
-            'new_category' => __('New Category...!', 'bp-group-documents'),
+            'new_category' => __('New Category', 'bp-group-documents'),
             'no_file_selected' => __('You must select a file to upload!', 'bp-group-documents'),
             'sure_to_delete_document' => __('Are you sure you wish to permanently delete this document?', 'bp-group-documents'),
             'add'=>__('Add','bp-group-documents'),
