@@ -1,9 +1,9 @@
 ===BP Group Documents  ===
-Contributors: lenasterg, NTS on cti.gr
+Contributors: lenasterg, NTS on cti.gr, sch.gr
 Tags: wpms, buddypress, group, document, plugin, file, media, storage, upload, widget
 Requires at least: 4.6
-Tested up to: 5.1
-Stable tag: 1.12.3
+Tested up to: 6.2
+Stable tag: 1.22
 License: GNU General Public License 3.0 or newer (GPL) http://www.gnu.org/licenses/gpl.html
 
 
@@ -69,11 +69,17 @@ function bp_only_logged_in_can_download( $error ) {
 	);
     }
     return $error;
-    //end added on 16/1/2015
 }
 
 add_filter( 'bp_group_documents_download_access', 'bp_only_logged_in_can_download' );
 `
+= I want to hide the files icon from the tab =
+Add to your Customizer 'Custom CSS' panel the following:
+`li#nav-documents-groups-li, li#nav-documents-personal-li a {
+    background: none;
+}
+`
+
 
 == Screenshots ==
 1. Admin settings page
@@ -88,6 +94,32 @@ add_filter( 'bp_group_documents_download_access', 'bp_only_logged_in_can_downloa
 
 
 == Changelog ==
+
+= Version 1.22 (28 July 2023) =
+* Fix for valid for file extensions, props @boonebgorges 
+
+
+= Version 1.21 (11 May 2023) =
+* New settings options added for 'Display File Owner', 'Display File Date'
+* Tested with WordPress 6.2.0 and BuddyPress 11.0
+
+= Version 1.20.1 (3/02/2023) =
+* Fix a PHP warning when in a subsite
+
+= Version 1.20 (27/01/2023) =
+* New functionality: If Activity Plus Reloaded for BuddyPress plugin is installed, it adds an icon for documents upload next to 'Activity Plus Reloaded for BuddyPress plugin' icons.
+
+= Version 1.14 (11/11/2022) =
+* Tested with WordPress 6.1 and BuddyPress 10.6.0
+* Code standards fixes
+* Changed some strings
+* Various bug fixes
+
+
+
+= Version 1.13 (3/10/2022) =
+* Compatible with PHP 8.x
+* Tested with WordPress 6.0.2 and BuddyPress 10.4.0
 
 = Version 1.12.3 (9/4/2019) =
 * Fix some PHP 7.x warnings
@@ -189,12 +221,12 @@ add_filter( 'bp_group_documents_download_access', 'bp_only_logged_in_can_downloa
 
 
 = Version 1.2.1 (September 17, 2013) =
-* Bug fix: http://wordpress.org/support/topic/bugfix-for-broken-icon-link, thanks to @sanderbontje
-* Bug fix: http://wordpress.org/support/topic/error-message-if-you-edit-groups thanks to @valuser for reporting
-* Bug fix: http://wordpress.org/support/topic/widget-functionality thanks to @kcurlsjr for reporting
+* Bug fix: https://wordpress.org/support/topic/bugfix-for-broken-icon-link, thanks to @sanderbontje
+* Bug fix: https://wordpress.org/support/topic/error-message-if-you-edit-groups thanks to @valuser for reporting
+* Bug fix: https://wordpress.org/support/topic/widget-functionality thanks to @kcurlsjr for reporting
 
 = Version 1.2 (September 3,2013) =
-* Added Swedish translation. Thanks goes to nat0n (http://wordpress.org/support/profile/nat0n)
+* Added Swedish translation. Thanks goes to nat0n (https://wordpress.org/support/profile/nat0n)
 
 = Version 1.1 (September 3,2013) =
 * Fix some broken links by changing the plugin directory name with BP_GROUP_DOCUMENTS_DIR constant
@@ -216,10 +248,4 @@ License.txt - contains the licensing details for this component.
 
 == Feedback ==
 
-Please leave a comment  with any bugs, improvements, or comments at http://lenasterg.wordpress.com
-
-
-== Donate ==
-You can  say "Thank You" via my Amazon wish list
-http://www.amazon.co.uk/registry/wishlist/7HYK62UCVCDI
-or donate at paypal https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q4VCLDW4BFW6L
+Please leave a comment  with any bugs, improvements, or comments at https://lenasterg.wordpress.com

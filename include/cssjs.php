@@ -1,7 +1,7 @@
 <?php
 // Exit if accessed directly
-if (!defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 /**
@@ -12,35 +12,38 @@ if (!defined('ABSPATH')) {
  * @version 2 7/3/2013 stergatu, replaced hardcoded plugin directory with BP_GROUP_DOCUMENTS_DIR
  */
 function bp_group_documents_front_cssjs() {
-    $bp = buddypress();
+	$bp = buddypress();
 
-    //if we're on a group page
-    if ($bp->current_component == $bp->groups->slug) {
-        wp_enqueue_script('bp-group-documents', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/js/general.js', array('jquery'), BP_GROUP_DOCUMENTS_VERSION);
-        wp_localize_script('bp-group-documents', 'l10nBpGrDocuments', array(
-            'new_category' => __('New Category...!', 'bp-group-documents'),
-            'no_file_selected' => __('You must select a file to upload!', 'bp-group-documents'),
-            'sure_to_delete_document' => __('Are you sure you wish to permanently delete this document?', 'bp-group-documents'),
-            'add'=>__('Add','bp-group-documents'),
-        ));
+	//if we're on a group page
+	if ( $bp->current_component === $bp->groups->slug ) {
+		wp_enqueue_script( 'bp-group-documents', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/js/general.js', array( 'jquery' ), BP_GROUP_DOCUMENTS_VERSION );
+		wp_localize_script(
+			'bp-group-documents',
+			'l10nBpGrDocuments',
+			array(
+				'new_category'            => __( 'New Category...!', 'bp-group-documents' ),
+				'no_file_selected'        => __( 'You must select a file to upload!', 'bp-group-documents' ),
+				'sure_to_delete_document' => __( 'Are you sure you wish to permanently delete this document?', 'bp-group-documents' ),
+				'add'                     => __( 'Add', 'bp-group-documents' ),
+			)
+		);
 
+		wp_register_style( 'bp-group-documents', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/css/style.css', false, BP_GROUP_DOCUMENTS_VERSION );
+		wp_enqueue_style( 'bp-group-documents' );
 
-        wp_register_style('bp-group-documents', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/css/style.css', false, BP_GROUP_DOCUMENTS_VERSION);
-        wp_enqueue_style('bp-group-documents');
-
-        switch (BP_GROUP_DOCUMENTS_THEME_VERSION) {
-            case '1.1':
-                wp_enqueue_style('bp-group-documents-1.1', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/css/11.css');
-                break;
-            case '1.2':
-                //	wp_enqueue_style('bp-group-documents-1.2', plugins_url() . '/buddypress-group-documents/css/12.css');
-                break;
-        }
-    }
+		switch ( BP_GROUP_DOCUMENTS_THEME_VERSION ) {
+			case '1.1':
+				wp_enqueue_style( 'bp-group-documents-1.1', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/css/11.css' );
+				break;
+			case '1.2':
+				//	wp_enqueue_style('bp-group-documents-1.2', plugins_url() . '/buddypress-group-documents/css/12.css');
+				break;
+		}
+	}
 }
 
 //changed with chriskeeble suggestion
-add_action('wp_enqueue_scripts', 'bp_group_documents_front_cssjs');
+add_action( 'wp_enqueue_scripts', 'bp_group_documents_front_cssjs' );
 
 /**
  * bp_group_documents_admin_cssjs()
@@ -50,8 +53,8 @@ add_action('wp_enqueue_scripts', 'bp_group_documents_front_cssjs');
  * @deprecated since 1.5
  */
 function bp_group_documents_admin_cssjs() {
-    wp_enqueue_style('bp-group-documents-admin', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/css/admin.css');
+	wp_enqueue_style( 'bp-group-documents-admin', plugins_url() . '/' . BP_GROUP_DOCUMENTS_DIR . '/css/admin.css' );
 }
 
 //changed with chriskeeble suggestion
-add_action('admin_head', 'bp_group_documents_admin_cssjs');
+add_action( 'admin_head', 'bp_group_documents_admin_cssjs' );
