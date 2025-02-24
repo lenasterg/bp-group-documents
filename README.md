@@ -1,4 +1,12 @@
 ## BP Group Documents  - WordPress Plugin
+Contributors: lenasterg, NTS on cti.gr, sch.gr
+Tags:  buddypress, group documents, file, storage, widget
+Requires at least: 4.6
+Tested up to: 6.7.2
+Stable tag: 2.0
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+										  
 
 You can find the plugin at  https://wordpress.org/plugins/bp-group-documents/ 
 
@@ -59,8 +67,8 @@ function bp_only_logged_in_can_download( $error ) {
 // If we have a only logged-in users site
     if ( ! is_user_logged_in() ) {
 	$error = array(
-	    'message' => __( 'You must log in to access the page you requested.', 'buddypress' ),
-	    'redirect' => bp_root_domain()
+	    'message' => esc_html__( 'You must log in to access the page you requested.', 'buddypress' ),
+	    'redirect' => bp_root_url()
 	);
     }
     return $error;
@@ -68,6 +76,12 @@ function bp_only_logged_in_can_download( $error ) {
 
 add_filter( 'bp_group_documents_download_access', 'bp_only_logged_in_can_download' );
 `
+= I want to hide the files icon from the tab =
+Add to your Customizer 'Custom CSS' panel the following:
+`li#nav-documents-groups-li, li#nav-documents-personal-li a {
+    background: none;
+}
+
 
 ## Screenshots
 1. Admin settings page
@@ -82,6 +96,23 @@ add_filter( 'bp_group_documents_download_access', 'bp_only_logged_in_can_downloa
 
 
 ## Changelog
+
+= Version 2.0 (21 February 2025) =
+* BuddyPress 12+ compatible, tested up to BuddyPress 14.3.3
+* Fix bugs related to category edit and delete
+* Translators comments added
+* Delete old deprecated functions
+
+
+= Version 1.25 (1 December 2023) =
+* Accessibility fix: Add alt attribute in widgets icons
+
+= Version 1.24 (31 August 2023) =
+* Fix a bug in the widgets
+
+= Version 1.23 (31 August 2023) =
+* Fix some PHP 8.1+ warnings and speed improvements
+
 
 = Version 1.22 (28 July 2023) =
 * Fix for valid for file extensions, props @boonebgorges 
@@ -206,12 +237,12 @@ add_filter( 'bp_group_documents_download_access', 'bp_only_logged_in_can_downloa
 
 
 = Version 1.2.1 (September 17, 2013) =
-* Bug fix: http://wordpress.org/support/topic/bugfix-for-broken-icon-link, thanks to @sanderbontje
-* Bug fix: http://wordpress.org/support/topic/error-message-if-you-edit-groups thanks to @valuser for reporting
-* Bug fix: http://wordpress.org/support/topic/widget-functionality thanks to @kcurlsjr for reporting
+* Bug fix: https://wordpress.org/support/topic/bugfix-for-broken-icon-link, thanks to @sanderbontje
+* Bug fix: https://wordpress.org/support/topic/error-message-if-you-edit-groups thanks to @valuser for reporting
+* Bug fix: https://wordpress.org/support/topic/widget-functionality thanks to @kcurlsjr for reporting
 
 = Version 1.2 (September 3,2013) =
-* Added Swedish translation. Thanks goes to nat0n (http://wordpress.org/support/profile/nat0n)
+* Added Swedish translation. Thanks goes to nat0n (https://wordpress.org/support/profile/nat0n)
 
 = Version 1.1 (September 3,2013) =
 * Fix some broken links by changing the plugin directory name with BP_GROUP_DOCUMENTS_DIR constant

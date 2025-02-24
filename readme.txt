@@ -1,10 +1,11 @@
 ===BP Group Documents  ===
 Contributors: lenasterg, NTS on cti.gr, sch.gr
-Tags: wpms, buddypress, group, document, plugin, file, media, storage, upload, widget
+Tags:  buddypress, group documents, file, storage, widget
 Requires at least: 4.6
-Tested up to: 6.2
-Stable tag: 1.22
-License: GNU General Public License 3.0 or newer (GPL) http://www.gnu.org/licenses/gpl.html
+Tested up to: 6.7.2
+Stable tag: 2.0
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 
 BP Group Documents creates a page within each BuddyPress group to upload and any type of file or document.
@@ -64,8 +65,8 @@ function bp_only_logged_in_can_download( $error ) {
 // If we have a only logged-in users site
     if ( ! is_user_logged_in() ) {
 	$error = array(
-	    'message' => __( 'You must log in to access the page you requested.', 'buddypress' ),
-	    'redirect' => bp_root_domain()
+	    'message' => esc_html__( 'You must log in to access the page you requested.', 'bp-group-documents' ),
+	    'redirect' => bp_root_url()
 	);
     }
     return $error;
@@ -94,6 +95,22 @@ Add to your Customizer 'Custom CSS' panel the following:
 
 
 == Changelog ==
+= Version 2.0 (21 February 2025) =
+* BuddyPress 12+ compatible, tested up to BuddyPress 14.3.3
+* Fix bugs related to category edit and delete
+* Translators comments added
+* Delete old deprecated functions
+
+
+= Version 1.25 (1 December 2023) =
+* Accessibility fix: Add alt attribute in widgets icons
+
+= Version 1.24 (31 August 2023) =
+* Fix a bug in the widgets
+
+= Version 1.23 (31 August 2023) =
+* Fix some PHP 8.1+ warnings and speed improvements
+
 
 = Version 1.22 (28 July 2023) =
 * Fix for valid for file extensions, props @boonebgorges 
@@ -245,7 +262,3 @@ Roadmap.txt - contains ideas proposed and the (approximate) order of implementat
 History.txt - contains all the changes since version .1
 
 License.txt - contains the licensing details for this component.
-
-== Feedback ==
-
-Please leave a comment  with any bugs, improvements, or comments at https://lenasterg.wordpress.com

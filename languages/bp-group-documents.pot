@@ -1,556 +1,698 @@
-# Translation of the WordPress plugin   by .
-# Copyright (C) 2010
-# This file is distributed under the same license as the  package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
-#
-#, fuzzy
+# Copyright (C) 2025 lenasterg
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: buddypress group documents\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/buddypress-group-documents\n"
-"POT-Creation-Date: 2023-05-11 16:46+0300\n"
-"PO-Revision-Date: 2014-12-08 12:04+0200\n"
-"Last-Translator: Lena Stergatu <stergatu@cti.gr>\n"
-"Language-Team: \n"
+"Project-Id-Version: BP Group Documents 2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bp-group-documents\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.4.3\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: .\n"
+"POT-Creation-Date: 2025-02-24T13:31:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: bp-group-documents\n"
 
-#: class-bp-group-documents-plugin-extension.php:24 class-bp-group-documents-plugin-extension.php:36
-#: include/activity.php:186 include/admin.php:20 include/admin.php:358
-#: include/bp_group_documents_functions.php:51 include/widgets.php:54 include/widgets.php:207
-#: include/widgets.php:371 include/widgets.php:514 loader.php:132
+#. Plugin Name of the plugin
+msgid "BP Group Documents"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/bp-group-documents/"
+msgstr ""
+
+#. Description of the plugin
+msgid "BP Group Documents creates a page within each BuddyPress group to upload and any type of file or document."
+msgstr ""
+
+#. Author of the plugin
+msgid "lenasterg"
+msgstr ""
+
+#: class-bp-group-documents-plugin-extension.php:29
+#: class-bp-group-documents-plugin-extension.php:41
+#: include/activity.php:283
+#: include/admin.php:21
+#: include/admin.php:338
+#: include/bp_group_documents_functions.php:55
+#: include/widgets.php:60
+#: include/widgets.php:278
+#: include/widgets.php:500
+#: include/widgets.php:711
+#: loader.php:140
 msgid "Documents"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:82
+#: class-bp-group-documents-plugin-extension.php:91
 msgid "There was an error saving, please try again"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:84
+#: class-bp-group-documents-plugin-extension.php:93
 msgid "Settings Saved."
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:119
+#: class-bp-group-documents-plugin-extension.php:129
 msgid "Category List for"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:132
+#: class-bp-group-documents-plugin-extension.php:142
 msgid "Update"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:137
-#, php-format
-msgid "Are you sure you want to delete category <b>%s</b>?"
+#. translators: %s: category name
+#: class-bp-group-documents-plugin-extension.php:153
+msgid "Are you sure you want to delete category <strong>%s</strong>?"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:140
-#, php-format
+#. translators: %s: document name
+#: class-bp-group-documents-plugin-extension.php:162
 msgid "Any %s in the category will be left with no category."
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:144
+#: class-bp-group-documents-plugin-extension.php:165
 msgid "You can later assign them to another  category."
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:147 class-bp-group-documents-plugin-extension.php:156
-#: templates/groups/single/documents.php:152
+#: class-bp-group-documents-plugin-extension.php:168
+#: class-bp-group-documents-plugin-extension.php:178
+#: templates/groups/single/documents.php:195
 msgid "Delete"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:155 templates/groups/single/documents.php:148
+#: class-bp-group-documents-plugin-extension.php:177
+#: templates/groups/single/documents.php:191
 msgid "Edit"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:171
+#: class-bp-group-documents-plugin-extension.php:193
 msgid "Save Changes"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:185
+#: class-bp-group-documents-plugin-extension.php:209
 msgid "Upload Permissions:"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:200 class-bp-group-documents-plugin-extension.php:212
+#: class-bp-group-documents-plugin-extension.php:224
+#: class-bp-group-documents-plugin-extension.php:236
 msgid "All Group Members"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:209 class-bp-group-documents-plugin-extension.php:216
+#: class-bp-group-documents-plugin-extension.php:233
+#: class-bp-group-documents-plugin-extension.php:240
 msgid "Only Group's Administrators and Moderators"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:248
-#, php-format
+#. Translators: %s is replaced with the lowercase name of the group (e.g., "group1").
+#: class-bp-group-documents-plugin-extension.php:278
 msgid "Group %s category deleted successfully"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:254 class-bp-group-documents-plugin-extension.php:270
-#, php-format
+#. Translators: %s is replaced with the lowercase name of the group (e.g., "group1").
+#: class-bp-group-documents-plugin-extension.php:289
+#: class-bp-group-documents-plugin-extension.php:317
 msgid "No changes were made. This %s category name is used already"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:258
-#, php-format
+#. Translators: %s is replaced with the lowercase name of the group (e.g., "group1").
+#: class-bp-group-documents-plugin-extension.php:300
 msgid "Group %s category renamed successfully"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:267
-#, php-format
+#: class-bp-group-documents-plugin-extension.php:304
+msgid "Failed to rename the category."
+msgstr ""
+
+#. Translators: %s is replaced with the lowercase name of the group (e.g., "group1").
+#: class-bp-group-documents-plugin-extension.php:325
 msgid "New group %s category created"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:283
+#: class-bp-group-documents-plugin-extension.php:339
 msgid "Upload Permissions changed successfully"
 msgstr ""
 
-#: class-bp-group-documents-plugin-extension.php:290
+#: class-bp-group-documents-plugin-extension.php:346
 msgid "No changes were made. Either error or you didn't change anything"
 msgstr ""
 
-#: include/activity.php:18
-#, php-format
+#. translators: %1$s: User who uploaded the file, %2$s: File name with a link, %3$s: Group name with a link
+#: include/activity.php:27
+#: include/activity.php:41
 msgid "%1$s uploaded the file: %2$s to %3$s"
 msgstr ""
 
-#: include/activity.php:42
-#, php-format
+#. Translators: %1$s: User link, %2$s: Document link, %3$s: Group link
+#: include/activity.php:77
 msgid "%1$s edited the file: %2$s in %3$s"
 msgstr ""
 
-#: include/activity.php:64
-#, php-format
+#. Translators: %1$s: User link, %2$s: Document link, %3$s: Group link
+#: include/activity.php:89
+msgid "%1$s edited the file: %2$s in  %3$s"
+msgstr ""
+
+#. Translators: %1$s: User link, %2$s: Document name, %3$s: Group link
+#: include/activity.php:125
+#: include/activity.php:138
 msgid "%1$s deleted the file: %2$s from %3$s"
 msgstr ""
 
-#: include/activity.php:188 include/admin.php:369
-#, php-format
+#. Translators: %s: Documents
+#. Translators: %s is replaced with the name of documents
+#: include/activity.php:287
+#: include/admin.php:342
 msgid "Show New Group %s"
 msgstr ""
 
-#: include/activity.php:190 include/admin.php:381
-#, php-format
+#. Translators: %s: Documents
+#. Translators: %s is replaced with the name of documents
+#: include/activity.php:291
+#: include/admin.php:348
 msgid "Show Group %s Edits"
 msgstr ""
 
-#: include/admin.php:101 include/admin.php:269
+#: include/admin.php:109
+#: include/admin.php:280
+#: include/admin.php:312
 msgid "Settings"
 msgstr ""
 
-#: include/admin.php:106
+#: include/admin.php:114
 msgid "Settings Updated."
 msgstr ""
 
-#: include/admin.php:113
+#: include/admin.php:121
 msgid "Use this name instead of \"documents\" "
 msgstr ""
 
-#: include/admin.php:119 templates/groups/single/documents.php:215
+#: include/admin.php:127
+#: templates/groups/single/documents.php:258
 msgid "Valid File Formats"
 msgstr ""
 
-#: include/admin.php:125
+#: include/admin.php:133
 msgid "Items per Page"
 msgstr ""
 
-#: include/admin.php:130
+#: include/admin.php:138
 msgid "Upload Permission:"
 msgstr ""
 
-#: include/admin.php:137
+#: include/admin.php:145
 msgid "Members &amp; Moderators"
 msgstr ""
 
-#: include/admin.php:144
+#: include/admin.php:152
 msgid "Moderators Only"
 msgstr ""
 
-#: include/admin.php:151
+#: include/admin.php:159
 msgid "Let individual moderators decide"
 msgstr ""
 
-#: include/admin.php:154
+#: include/admin.php:162
 msgid "Use Categories"
 msgstr ""
 
-#: include/admin.php:165
+#: include/admin.php:173
 msgid "Display Icons"
 msgstr ""
 
-#: include/admin.php:176
+#: include/admin.php:184
 msgid "Display File Owner"
 msgstr ""
 
-#: include/admin.php:188
+#: include/admin.php:196
 msgid "Display File Date"
 msgstr ""
 
-#: include/admin.php:199
+#: include/admin.php:207
 msgid "Display File Size"
 msgstr ""
 
-#: include/admin.php:210
+#: include/admin.php:218
 msgid "Display File Downloads "
 msgstr ""
 
-#: include/admin.php:222
+#: include/admin.php:230
 msgid "Save Settings"
 msgstr ""
 
-#: include/admin.php:270
-msgid "Buddypress Group Documents"
+#: include/admin.php:281
+msgid "BuddyPress Group Documents"
 msgstr ""
 
-#: include/bp_group_documents_functions.php:52
+#: include/bp_group_documents_functions.php:56
 msgid "Group"
 msgstr ""
 
-#: include/bp_group_documents_functions.php:59 templates/groups/single/documents.php:13
+#: include/bp_group_documents_functions.php:64
+#: templates/groups/single/documents.php:20
 msgid "List"
 msgstr ""
 
-#: include/bp_group_documents_functions.php:75 include/class-bp-group-documents-template.php:86
-#: include/class-bp-group-documents-template.php:121 include/class-bp-group-documents-template.php:142
-#: include/class-bp-group-documents-template.php:218
+#: include/bp_group_documents_functions.php:84
+#: include/class-bp-group-documents-template.php:178
+#: include/class-bp-group-documents-template.php:205
+#: include/class-bp-group-documents-template.php:299
 msgid "There was a security problem"
 msgstr ""
 
-#: include/bp_group_documents_functions.php:79 include/class-bp-group-documents-template.php:242
+#: include/bp_group_documents_functions.php:90
+#: include/class-bp-group-documents-template.php:323
 msgid "The item to delete could not be found"
 msgstr ""
 
-#: include/bp_group_documents_functions.php:190
+#: include/bp_group_documents_functions.php:99
+msgid "You do not have permission to delete this document."
+msgstr ""
+
+#: include/bp_group_documents_functions.php:115
+msgid "Document deleted successfully"
+msgstr ""
+
+#: include/bp_group_documents_functions.php:121
+msgid "There was a problem deleting the document"
+msgstr ""
+
+#: include/bp_group_documents_functions.php:171
+msgid "Invalid document object"
+msgstr ""
+
+#: include/bp_group_documents_functions.php:176
+msgid "File not found"
+msgstr ""
+
+#: include/bp_group_documents_functions.php:182
+msgid "Unable to retrieve file size"
+msgstr ""
+
+#: include/bp_group_documents_functions.php:257
 msgid "Group Document Categories"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:118 include/group-forum-attachments.php:62
+#: include/class-bp-group-documents-template.php:134
+msgid "Invalid nonce. Possible duplicate submission or security issue."
+msgstr ""
+
+#: include/class-bp-group-documents-template.php:165
+#: include/group-forum-attachments.php:62
 msgid "Document successfully uploaded"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:139
+#: include/class-bp-group-documents-template.php:191
+msgid "Invalid document ID"
+msgstr ""
+
+#: include/class-bp-group-documents-template.php:202
 msgid "Document successfully edited"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:187 templates/groups/single/documents.php:293
+#: include/class-bp-group-documents-template.php:268
+#: templates/groups/single/documents.php:335
 msgid "Upload a New Document"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:210
+#: include/class-bp-group-documents-template.php:291
 msgid "You don't have permission to upload files"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:222
+#: include/class-bp-group-documents-template.php:303
 msgid "The item to edit could not be found"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:234
+#: include/class-bp-group-documents-template.php:315
 msgid "Edit Document"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:246
+#: include/class-bp-group-documents-template.php:327
 msgid "Document successfully deleted"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:249
+#: include/class-bp-group-documents-template.php:330
 msgid "You don't have permission to delete the file"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:380
-#, php-format
+#. Translators: This text shows the current range of items being viewed (start to end) and the total item count. %1$s: Start record, %2$s: End record, %3$s: Total records
+#: include/class-bp-group-documents-template.php:481
 msgid "Viewing item %1$s to %2$s (of %3$s items)"
 msgstr ""
 
-#: include/class-bp-group-documents-template.php:423 include/widgets.php:610
+#: include/class-bp-group-documents-template.php:489
+msgid "No items to display"
+msgstr ""
+
+#: include/class-bp-group-documents-template.php:505
+msgid "&laquo;"
+msgstr ""
+
+#: include/class-bp-group-documents-template.php:534
+msgid "&raquo;"
+msgstr ""
+
+#: include/class-bp-group-documents-template.php:570
+#: include/widgets.php:885
 msgid "Add New"
 msgstr ""
 
-#: include/class-bp-group-documents.php:224
-msgid "Whoops!  There was no file selected for upload."
+#: include/class-bp-group-documents.php:365
+msgid "Whoops! There was no file selected for upload."
 msgstr ""
 
-#: include/class-bp-group-documents.php:229
+#: include/class-bp-group-documents.php:371
 msgid "The type of document submitted is not allowed"
 msgstr ""
 
-#: include/class-bp-group-documents.php:237
+#: include/class-bp-group-documents.php:379
 msgid "There was a problem; your file is larger than is allowed by the site administrator."
 msgstr ""
 
-#: include/class-bp-group-documents.php:240
+#: include/class-bp-group-documents.php:382
 msgid "There was a problem; the file was only partially uploaded."
 msgstr ""
 
-#: include/class-bp-group-documents.php:243
+#: include/class-bp-group-documents.php:385
 msgid "There was a problem; no file was found for the upload."
 msgstr ""
 
-#: include/class-bp-group-documents.php:246
+#: include/class-bp-group-documents.php:388
 msgid "There was a problem; the temporary folder for the file is missing."
 msgstr ""
 
-#: include/class-bp-group-documents.php:249
+#: include/class-bp-group-documents.php:391
 msgid "There was a problem; the file could not be saved."
 msgstr ""
 
-#: include/class-bp-group-documents.php:270
+#: include/class-bp-group-documents.php:412
 msgid "There was a problem saving your file, please try again."
 msgstr ""
 
-#: include/class-bp-group-documents.php:479
-msgid "In category:"
-msgstr ""
-
-#: include/cssjs.php:24
-msgid "New Category...!"
-msgstr ""
-
-#: include/cssjs.php:25
-msgid "You must select a file to upload!"
+#. Translators: %s will be replaced with the file extension (e.g., .pdf, .jpg).
+#: include/class-bp-group-documents.php:687
+msgid "Icon for file type: %s"
 msgstr ""
 
 #: include/cssjs.php:26
-msgid "Are you sure you wish to permanently delete this document?"
+msgid "New Category...!"
 msgstr ""
 
 #: include/cssjs.php:27
+msgid "You must select a file to upload!"
+msgstr ""
+
+#: include/cssjs.php:28
+msgid "Are you sure you wish to permanently delete this document?"
+msgstr ""
+
+#: include/cssjs.php:29
 msgid "Add"
 msgstr ""
 
-#: include/filters.php:92
+#: include/filters.php:112
+#: include/filters.php:117
 msgid "That group does not exist."
 msgstr ""
 
-#: include/filters.php:101
-#, php-format
-msgid ""
-"You must be a logged-in member of the group %s to access this document. If you are a member of the group, "
-"please log into the site and try again."
+#. Translators: %s will be replaced with the name of the group.
+#: include/filters.php:131
+#: include/filters.php:140
+msgid "You must be a logged-in member of the group %s to access this document. If you are a member of the group, please log into the site and try again."
 msgstr ""
 
-#: include/filters.php:146
+#: include/filters.php:193
+#: include/filters.php:199
 msgid "The file could not be found."
 msgstr ""
 
-#: include/group-forum-attachments.php:16
+#: include/group-forum-attachments.php:17
 msgid "Upload document (+)"
 msgstr ""
 
-#: include/group-forum-attachments.php:19 templates/groups/single/documents.php:210
+#: include/group-forum-attachments.php:20
+#: templates/groups/single/documents.php:253
 msgid "Choose File:"
 msgstr ""
 
-#: include/group-forum-attachments.php:24 templates/groups/single/documents.php:236
+#: include/group-forum-attachments.php:25
 msgid "Display Name:"
 msgstr ""
 
-#: include/group-forum-attachments.php:28 templates/groups/single/documents.php:239
+#: include/group-forum-attachments.php:29
+#: templates/groups/single/documents.php:283
 msgid "Description:"
 msgstr ""
 
-#: include/notifications.php:27
+#: include/notifications.php:29
 msgid "A member uploads a document to a group you belong to"
 msgstr ""
 
-#: include/notifications.php:33
+#: include/notifications.php:35
 msgid "A member uploads a document to a group for which you are an moderator/admin"
 msgstr ""
 
-#: include/notifications.php:62
-#, php-format
+#. Translators: %s will be replaced with the name of the group where the document was uploaded.
+#: include/notifications.php:79
 msgid "A document was uploaded to %s"
 msgstr ""
 
-#: include/notifications.php:125
-#, php-format
+#. Translators:  %1$s - The name of the user who uploaded the file.  %2$s - The name of the uploaded file.  %3$s - The name of the group where the file was uploaded. %4$s - The name of the user (repeated for profile link). %5$s - The URL to the user's profile. %6$s - The name of the group (repeated for group homepage link). %7$s - The URL to the group's homepage. %8$s - The direct download link for the uploaded file.
+#: include/notifications.php:126
 msgid ""
 "%1$s uploaded a new file: %2$s to the group: %3$s.\n"
-"\n"
 "To see %4$s's profile: %5$s\n"
-"\n"
 "To see the group %6$s's homepage: %7$s\n"
-"\n"
 "To download the new document directly: %8$s\n"
-"\n"
+""
 msgstr ""
 
-#: include/notifications.php:147
-#, php-format
+#. Translators: %s is a URL where users can modify notification settings.
+#: include/notifications.php:153
 msgid "To disable these notifications please log in and go to: %s"
 msgstr ""
 
-#: include/widgets.php:57 include/widgets.php:73 include/widgets.php:90 include/widgets.php:131
-#: include/widgets.php:158
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:65
+#: include/widgets.php:93
+#: include/widgets.php:111
+#: include/widgets.php:173
+#: include/widgets.php:204
 msgid "Recent Group %s"
 msgstr ""
 
-#: include/widgets.php:59
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:70
 msgid "The most recently uploaded group %s. Only from public groups"
 msgstr ""
 
-#: include/widgets.php:110 include/widgets.php:264 include/widgets.php:434
-#, php-format
+#. Translators: %s: Group name
+#. translators: %s: Group name
+#. Translators: %s is the group name, wrapped in an HTML anchor tag for linking to the group's page.
+#: include/widgets.php:139
+#: include/widgets.php:144
+#: include/widgets.php:365
+#: include/widgets.php:368
+#: include/widgets.php:594
+#: include/widgets.php:600
 msgid "posted in %s"
 msgstr ""
 
-#: include/widgets.php:116 include/widgets.php:275 include/widgets.php:440 include/widgets.php:603
-#, php-format
+#. translators: %s: Document type name
+#. Translators: %s: The name of the document type (e.g., "documents")
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#. Translators: %s: Name of document
+#: include/widgets.php:154
+#: include/widgets.php:382
+#: include/widgets.php:610
+#: include/widgets.php:872
 msgid "There are no %s to display."
 msgstr ""
 
-#: include/widgets.php:167 include/widgets.php:316 include/widgets.php:487 include/widgets.php:667
+#: include/widgets.php:216
+#: include/widgets.php:434
+#: include/widgets.php:669
+#: include/widgets.php:963
 msgid "Title:"
 msgstr ""
 
-#: include/widgets.php:169 include/widgets.php:318
+#: include/widgets.php:225
+#: include/widgets.php:438
 msgid "Filter by Group:"
 msgstr ""
 
-#: include/widgets.php:171 include/widgets.php:320
+#: include/widgets.php:229
+#: include/widgets.php:440
 msgid "Select Group..."
 msgstr ""
 
-#: include/widgets.php:188 include/widgets.php:337 include/widgets.php:489 include/widgets.php:670
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#. translators: %s: Name of the document type
+#: include/widgets.php:246
+#: include/widgets.php:460
+#: include/widgets.php:677
+#: include/widgets.php:972
 msgid "Show featured %s only"
 msgstr ""
 
-#: include/widgets.php:191 include/widgets.php:346 include/widgets.php:497 include/widgets.php:674
+#: include/widgets.php:256
+#: include/widgets.php:471
+#: include/widgets.php:689
+#: include/widgets.php:979
 msgid "Number of items to show:"
 msgstr ""
 
-#: include/widgets.php:210 include/widgets.php:226 include/widgets.php:241 include/widgets.php:283
-#: include/widgets.php:305
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:283
+#: include/widgets.php:314
+#: include/widgets.php:335
+#: include/widgets.php:395
+#: include/widgets.php:422
 msgid "Popular Group %s"
 msgstr ""
 
-#: include/widgets.php:212
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:288
 msgid "The most commonly downloaded group %s. Only for public groups"
 msgstr ""
 
-#: include/widgets.php:268
+#: include/widgets.php:373
 msgid "downloads"
 msgstr ""
 
-#: include/widgets.php:354
+#: include/widgets.php:481
 msgid "Show downloads"
 msgstr ""
 
-#: include/widgets.php:374 include/widgets.php:415 include/widgets.php:455 include/widgets.php:478
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:505
+#: include/widgets.php:565
+#: include/widgets.php:630
+#: include/widgets.php:658
 msgid "%s in your groups"
 msgstr ""
 
-#: include/widgets.php:376
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:510
 msgid "%s for a logged in user's groups."
 msgstr ""
 
-#: include/widgets.php:406
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:550
 msgid "Recent %s from your Groups"
 msgstr ""
 
-#: include/widgets.php:517
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:716
 msgid "%s in this group"
 msgstr ""
 
-#: include/widgets.php:519
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#: include/widgets.php:721
 msgid "%s for the current group."
 msgstr ""
 
-#: include/widgets.php:549 include/widgets.php:555 include/widgets.php:630 include/widgets.php:659
-#, php-format
+#. Translators: %s will be replaced with the name of the document type, e.g., "Documents".
+#. Translators: %s: Name of the document type
+#. Translators: %s: Name of document
+#: include/widgets.php:755
+#: include/widgets.php:767
+#: include/widgets.php:921
+#: include/widgets.php:953
 msgid "Recent %s for the group"
 msgstr ""
 
-#: include/widgets.php:588 templates/groups/single/documents.php:127
-#, php-format
+#. Translators:  %1$s: Name or link to the user who uploaded the document. %2$s: The date when the document was uploaded, formatted according to site settings.
+#: include/widgets.php:840
+#: templates/groups/single/documents.php:165
 msgid "Uploaded by %1$s on %2$s"
 msgstr ""
 
-#: include/widgets.php:591 templates/groups/single/documents.php:130
-#, php-format
+#. Translators: %s: User link
+#. Translators: %s is the name or link to the user who uploaded the document.
+#: include/widgets.php:853
+#: templates/groups/single/documents.php:171
 msgid "Uploaded by %s"
 msgstr ""
 
-#: include/widgets.php:594 templates/groups/single/documents.php:133
-#, php-format
+#. Translators: %s: Date
+#. Translators: %s is the name or link to the user who uploaded the document.
+#: include/widgets.php:859
+#: templates/groups/single/documents.php:177
 msgid "Uploaded on %s"
 msgstr ""
 
-#: include/widgets.php:614
+#: include/widgets.php:895
+#: include/widgets.php:901
 msgid "View all"
 msgstr ""
 
-#: loader.php:308
+#: loader.php:323
 msgid "Add documents"
 msgstr ""
 
-#: loader.php:309
+#: loader.php:324
 msgid "Please select a group to upload to"
 msgstr ""
 
-#: loader.php:329
-#, php-format
+#. Translators: %s is the name of the group where the user lacks permission to upload files.
+#: loader.php:360
 msgid "You don't have permission to upload files on group %s"
 msgstr ""
 
-#: templates/groups/single/documents.php:22 templates/groups/single/documents.php:265
+#: templates/groups/single/documents.php:29
+#: templates/groups/single/documents.php:305
 msgid "Category:"
 msgstr ""
 
-#: templates/groups/single/documents.php:24
+#: templates/groups/single/documents.php:31
 msgid "All"
 msgstr ""
 
-#: templates/groups/single/documents.php:35 templates/groups/single/documents.php:59
+#: templates/groups/single/documents.php:38
+#: templates/groups/single/documents.php:62
 msgid "Go"
 msgstr ""
 
-#: templates/groups/single/documents.php:41
+#: templates/groups/single/documents.php:44
 msgid "Order by:"
 msgstr ""
 
-#: templates/groups/single/documents.php:47
+#: templates/groups/single/documents.php:50
 msgid "Newest"
 msgstr ""
 
-#: templates/groups/single/documents.php:52
+#: templates/groups/single/documents.php:55
 msgid "Alphabetical"
 msgstr ""
 
-#: templates/groups/single/documents.php:57
+#: templates/groups/single/documents.php:60
 msgid "Most Popular"
 msgstr ""
 
-#: templates/groups/single/documents.php:138
-msgid " downloads since then."
+#: templates/groups/single/documents.php:183
+msgid "downloads since then."
 msgstr ""
 
-#: templates/groups/single/documents.php:180
+#: templates/groups/single/documents.php:223
 msgid "There are no documents in the selected category."
 msgstr ""
 
-#: templates/groups/single/documents.php:182
+#: templates/groups/single/documents.php:225
 msgid "There are no documents uploaded for this group."
 msgstr ""
 
-#: templates/groups/single/documents.php:220
-msgid "Document:"
+#: templates/groups/single/documents.php:263
+msgid "Document"
 msgstr ""
 
-#: templates/groups/single/documents.php:226
+#: templates/groups/single/documents.php:269
 msgid "Featured Document"
 msgstr ""
 
-#: templates/groups/single/documents.php:288
+#: templates/groups/single/documents.php:280
+msgid "Display Name"
+msgstr ""
+
+#: templates/groups/single/documents.php:330
 msgid "Save"
 msgstr ""
