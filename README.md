@@ -3,7 +3,7 @@ Contributors: lenasterg, NTS on cti.gr, sch.gr
 Tags:  buddypress, group documents, file, storage, widget
 Requires at least: 4.6
 Tested up to: 6.7.2
-Stable tag: 2.0
+Stable tag: 2.1
 License:           GNU General Public License v2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 										  
@@ -97,6 +97,9 @@ Add to your Customizer 'Custom CSS' panel the following:
 
 ## Changelog
 
+= Version 2.1 (10 July 2025) =
+* Bug fix: A user can edit and delete his/her uploaded files
+  
 = Version 2.0 (21 February 2025) =
 * BuddyPress 12+ compatible, tested up to BuddyPress 14.3.3
 * Fix bugs related to category edit and delete
