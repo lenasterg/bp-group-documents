@@ -1,11 +1,15 @@
 <?php
 /**
- * last edit 1.24
+ * last edit 2.1
  */
 // Exit if accessed directly
 if (! defined('ABSPATH') ) {
     exit;
 }
+
+/**
+ * @version 2.0
+ */
 class BP_Group_Documents
 {
     public $id; // int
@@ -25,6 +29,21 @@ class BP_Group_Documents
      */
     public $file_extension;
 
+    
+    /**
+     * 
+     * @var array
+     * @since  version 2.0
+     */
+    protected $casts = [
+        'id' => 'int',
+	'user_id' => 'int',
+        'group_id' => 'int',
+        'download_count' => 'int',
+	'featured' => 'bool'
+    ];
+    
+    
     /**
      * Constructor
      *
@@ -34,6 +53,7 @@ class BP_Group_Documents
      *
      * @param int|null $id     ID of the document.
      * @param mixed    $params Parameters to populate the object (optional).
+     * 
      */
     public function __construct( $id = null, $params = false )
     {
@@ -41,10 +61,30 @@ class BP_Group_Documents
             $this->id = (int) $id;
             if ($params ) {
                 $this->populate_passed($params);
+		
             } else {
                 $this->populate($this->id);
+	
             }
-        }
+	    /**
+		 * @since version 2.0
+	     */
+	    foreach ( $this->casts as $key => $value ) {
+		switch ($value) {
+                        case 'int':
+                            $this->$key = (int)$this->$key; // Convert to int
+                            break;
+                        case 'bool':
+                            $this->$key = (bool)$this->$key;  // Convert to boolean
+                            break;            
+                        default:
+                            break;
+                    }	  
+	    }
+	     
+	}
+	
+	
     }
 
     /**
@@ -52,6 +92,8 @@ class BP_Group_Documents
      *
      * This method will populate the object with a row from the database, 
      * based on the ID passed to the constructor.
+     * 
+     * @version 2.0, add cast of types
      */
     private function populate()
     {
@@ -61,9 +103,9 @@ class BP_Group_Documents
             foreach ( $this as $field => $value ) {
                 if (isset($row->$field) ) {
                     $this->$field = $row->$field;
+	
                 }
             }
-
         }
     }
 
@@ -85,9 +127,10 @@ class BP_Group_Documents
 
         foreach ( $this as $key => $value ) {
             if (isset($params[ $key ]) ) {
-                $this->$key = $params[ $key ];
-            }
+               $this->$key = $params[ $key ];
+	    }
         }
+	
     }
 
     /**
@@ -443,8 +486,9 @@ class BP_Group_Documents
         if (groups_is_user_admin($user_id, $group_id) ) {
             return true;
         }
-
+	
         switch ( $action ) {
+	    
         case 'add':
             // Check the group document upload permission setting
             switch ( get_option('bp_group_documents_upload_permission') ) {
@@ -477,14 +521,15 @@ class BP_Group_Documents
             }
             break;
         case 'edit':
-            $user_is_owner = ( $this->user_id === $user_id );
+	   $user_is_owner = ( $this->user_id === $user_id );
             if (groups_is_user_mod($user_id, $group_id) || ( groups_is_user_member($user_id, $group_id) && $user_is_owner ) ) {
                 return true;
             }
+	    
             break;
         case 'delete':
             $user_is_owner = ( $this->user_id === $user_id );
-            if (groups_is_user_mod($user_id, $group_id) || ( groups_is_user_member($user_id, $group_id) && $user_is_owner ) ) {
+	    if (groups_is_user_mod($user_id, $group_id) || ( groups_is_user_member($user_id, $group_id) && $user_is_owner ) ) {
                 return true;
             }
             break;
@@ -1021,4 +1066,3 @@ class BP_Group_Documents
         }
     }
 }
-

@@ -3,8 +3,8 @@
  * Plugin Name: BP Group Documents
  * Plugin URI: https://wordpress.org/plugins/bp-group-documents/
  * Description: BP Group Documents creates a page within each BuddyPress group to upload and any type of file or document.
- * Version: 2.0
- * Revision Date: February 17, 2025
+ * Version: 2.1
+ * Revision Date: July 10, 2025
  * Requires at least: 4.6
  * Tested up to: 6.7.2, BuddyPress 14.4.1
  * License: GNU General Public License v2 or later
@@ -25,7 +25,7 @@ defined('ABSPATH') || exit;
 
 //some constants that can be checked when extending this plugin
 define('BP_GROUP_DOCUMENTS_IS_INSTALLED', 1);
-define('BP_GROUP_DOCUMENTS_VERSION', '2.0');
+define('BP_GROUP_DOCUMENTS_VERSION', '2.1');
 define('BP_GROUP_DOCUMENTS_DB_VERSION', '6');
 define('BP_GROUP_DOCUMENTS_VALID_FILE_FORMATS', 'doc, docx, gif, gz, jpeg, jpg, ods, odt, pdf, png, pps, ppsx, ppt, pptx, rtf, tar, txt, xls, xlsx, zip');
 define('BP_GROUP_DOCUMENTS_ITEMS_PER_PAGE', 20);
