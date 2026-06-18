@@ -3,7 +3,7 @@ Contributors: lenasterg, NTS on cti.gr, sch.gr
 Tags:  buddypress, group documents, file, storage, widget
 Requires at least: 4.6
 Tested up to: 6.7.2
-Stable tag: 2.1
+Stable tag: 2.1.1
 License:           GNU General Public License v2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,9 @@ Add to your Customizer 'Custom CSS' panel the following:
 
 
 == Changelog ==
+= Version 2.1.1 (18 June 2026) =
+* New: Admin setting "Disable upload email notifications" to override per-user preferences and turn off document-upload emails site-wide.
+
 = Version 2.1 (10 July 2025) =
 * Bug fix: A user can edit and delete his/her uploaded files
 

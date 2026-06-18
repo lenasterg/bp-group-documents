@@ -160,4 +160,9 @@ To download the new document directly: %8$s
     } //end foreach
 }
 
-add_action('bp_group_documents_add_success', 'bp_group_documents_email_notification', 10);
+// Site administrators can override every member's per-user preference and disable
+// upload email notifications site-wide via the plugin settings screen. When that
+// option is set, the email notification action is never registered.
+if (! get_option('bp_group_documents_disable_email_notifications') ) {
+    add_action('bp_group_documents_add_success', 'bp_group_documents_email_notification', 10);
+}

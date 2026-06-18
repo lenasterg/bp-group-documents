@@ -3,8 +3,8 @@
  * Plugin Name: BP Group Documents
  * Plugin URI: https://wordpress.org/plugins/bp-group-documents/
  * Description: BP Group Documents creates a page within each BuddyPress group to upload and any type of file or document.
- * Version: 2.1
- * Revision Date: July 10, 2025
+ * Version: 2.1.1
+ * Revision Date: June 18, 2026
  * Requires at least: 4.6
  * Tested up to: 6.7.2, BuddyPress 14.4.1
  * License: GNU General Public License v2 or later
@@ -25,7 +25,7 @@ defined('ABSPATH') || exit;
 
 //some constants that can be checked when extending this plugin
 define('BP_GROUP_DOCUMENTS_IS_INSTALLED', 1);
-define('BP_GROUP_DOCUMENTS_VERSION', '2.1');
+define('BP_GROUP_DOCUMENTS_VERSION', '2.1.1');
 define('BP_GROUP_DOCUMENTS_DB_VERSION', '6');
 define('BP_GROUP_DOCUMENTS_VALID_FILE_FORMATS', 'doc, docx, gif, gz, jpeg, jpg, ods, odt, pdf, png, pps, ppsx, ppt, pptx, rtf, tar, txt, xls, xlsx, zip');
 define('BP_GROUP_DOCUMENTS_ITEMS_PER_PAGE', 20);
@@ -37,6 +37,8 @@ define('BP_GROUP_DOCUMENTS_USE_CATEGORIES', 1);
 define('BP_GROUP_DOCUMENTS_ENABLE_ALL_GROUPS', true);
 define('BP_GROUP_DOCUMENTS_PROGRESS_BAR', 1);
 define('BP_GROUP_DOCUMENTS_FORUM_ATTACHMENTS', 0);
+//when set, the site administrator can override per-user settings and disable upload email notifications site-wide
+define('BP_GROUP_DOCUMENTS_DISABLE_EMAIL_NOTIFICATIONS', 0);
 
 
 //allow override of URL slug
@@ -146,6 +148,7 @@ function bp_group_documents_install_upgrade()
         add_option('bp_group_documents_enable_all_groups', BP_GROUP_DOCUMENTS_ENABLE_ALL_GROUPS);
         add_option('bp_group_documents_progress_bar', BP_GROUP_DOCUMENTS_PROGRESS_BAR);
         add_option('bp_group_documents_forum_attachments', BP_GROUP_DOCUMENTS_FORUM_ATTACHMENTS);
+        add_option('bp_group_documents_disable_email_notifications', BP_GROUP_DOCUMENTS_DISABLE_EMAIL_NOTIFICATIONS);
         add_option('bp-group-documents-db-version', BP_GROUP_DOCUMENTS_DB_VERSION);
     }
     if (( get_site_option('bp-group-documents-db-version') ) && ( get_site_option('bp-group-documents-db-version') < 6 ) ) {
