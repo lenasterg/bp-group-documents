@@ -59,6 +59,14 @@ function bp_group_documents_admin()
         update_option('bp_group_documents_display_date', $bg_date);
 
         //turn absense of true into an explicit false
+        if (isset($_POST['disable_email_notifications']) && $_POST['disable_email_notifications'] ) {
+            $disable_email_notifications = 1;
+        } else {
+            $disable_email_notifications = 0;
+        }
+        update_option('bp_group_documents_disable_email_notifications', $disable_email_notifications);
+
+        //turn absense of true into an explicit false
         if (isset($_POST['use_categories']) && $_POST['use_categories'] ) {
             $categories = 1;
         } else {
@@ -100,6 +108,7 @@ function bp_group_documents_admin()
     $display_icons          = get_option('bp_group_documents_display_icons');
     $display_owner          = get_option('bp_group_documents_display_owner');
     $display_date          = get_option('bp_group_documents_display_date');
+    $disable_email_notifications = get_option('bp_group_documents_disable_email_notifications');
     $use_categories         = get_option('bp_group_documents_use_categories');
     $items_per_page         = get_option('bp_group_documents_items_per_page');
     $upload_permission      = get_option('bp_group_documents_upload_permission');
@@ -224,6 +233,19 @@ function bp_group_documents_admin()
                         }
                         ?>
          value="1" /></td>
+                </tr>
+                <tr>
+                    <th><label for="disable_email_notifications"><?php esc_html_e('Disable All Emails', 'bp-group-documents'); ?>:</label></th>
+                    <td>
+                        <input type="checkbox" name="disable_email_notifications" id="disable_email_notifications"
+                        <?php
+                        if ($disable_email_notifications ) {
+                            echo 'checked="checked"';
+                        }
+                        ?>
+         value="1" />
+                        <p class="description"><?php esc_html_e('Override Users settings and completely disable email notification when a document is uploaded.', 'bp-group-documents'); ?></p>
+                    </td>
                 </tr>
             </table>
             <p class="submit">
